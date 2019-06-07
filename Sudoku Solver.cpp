@@ -2,10 +2,10 @@
 //
 
 #include <iostream>
-#include "Block.h"
+#include "Sudoku.h"
 int main()
 {
-	Block block;
+	Sudoku sudoku;
     std::cout << "Hello World!\n";
 }
 
