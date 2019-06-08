@@ -6,7 +6,6 @@
 class Block
 {
 public:
-	Cell block[3][3];
 	std::list<int> missing_numbers;
 	Block();
 };
