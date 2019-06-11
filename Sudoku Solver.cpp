@@ -10,7 +10,6 @@ using namespace std;
 void readSudokuFromFile(ifstream* file, int m[][9]);
 void readSudokuFromConsole(int matrix[][9]);
 
-
 int main(int argc, char* argv[])
 {
 	ifstream sudoku_file;
@@ -44,7 +43,7 @@ int main(int argc, char* argv[])
 		}
 		cout << endl;
 	}
-	cout << "Is the read sudoku correct?(y/n):";
+	cout << "Is the read sudoku correct?(y/n): ";
 	cin >> confirmation;
 	if (confirmation == 'y') {
 		//start solving
@@ -56,6 +55,8 @@ int main(int argc, char* argv[])
 		}
 		else {
 			cout << "\nSudoku couldn't be solved, either the sudoku is wrong\nor needs a more complex solution than the unique candidate method\n";
+			cout << "The las state in the unique candidate solution is this:\n";
+			sudoku->printSudoku();
 		}
 	}
 	else {
@@ -100,16 +101,3 @@ void readSudokuFromConsole(int m[][9])
 	cin >> m[8][0] >> m[8][1] >> m[8][2] >> m[8][3] >> m[8][4] >> m[8][5] >> m[8][6] >> m[8][7] >> m[8][8];
 }
 
-
-
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

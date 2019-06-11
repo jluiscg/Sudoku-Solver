@@ -6,12 +6,11 @@ class Cell
 {
 private:
 	int number;
-	std::list<int> possibles;
 public:
+	std::list<int> possibles;
 	Cell();
 	Cell(int);
 	int getNumber();
 	void setNumber(int);
-	std::list<int> getPossiblesList();
 };
 

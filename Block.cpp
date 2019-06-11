@@ -1,5 +1,5 @@
 #include "Block.h"
 
-Block::Block()
+Block::Block():missing_numbers()
 {
 }
